@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+	--l_white: #D8DBE2;
+	--d_white: #bcc0c7;
+	--l_gray: #646b7a;
+	--current_tab: #242424;
+	--l_black: #373F51;
+	--d_black: #0e0e0e;
+	--error: #ff2a31;
+	--base: #a72a30;
+	--h_pink: #FF69B4;
+	--l_blue: #1CB5E0;
+	--d_blue: #1690b3;
+	--li_green: #45c6a6;
+	--l_green: #17B890;
+	--d_green: #0b5c48;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', helvetica;
+	outline: none;
+}
+
+body{
+    background: var(--current_tab)
+}
+
+.alert_message
+{
+  width: auto;
+  height: 50px;
+  padding: 0 20px 0 0;
+  position: absolute;
+  left: -500px;
+  bottom: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: 600ms ease-in-out;
+
+	font-size: 16px;
+	font-family: helvetica;
+	z-index: 100;
+}
+
+.alert_message.show
+{
+  left: 30px;
+}
+
+.alert_message::before
+{
+  content: '';
+  width: 20px;
+  height: 20px;
+  transform: translateX(-10px) rotate(45deg);
+}
+
+
+.alert_message,
+.alert_message::before
+{
+	background: var(--d_black);
+}
+
+.alert_message.success,
+.alert_message.success.alert_message::before
+{
+	color: var(--l_green);
+}
+
+.alert_message.fail,
+.alert_message.fail.alert_message::before
+{
+	background: var(--l_white);
+	color: var(--error);
+}
