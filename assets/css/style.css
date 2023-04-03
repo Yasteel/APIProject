@@ -1,6 +1,7 @@
 .header{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     gap: 2rem;
 
@@ -13,20 +14,60 @@
     padding: .7rem;
 }
 
-.controls button{
-    background: var(--l_green);
-    color: white;
+.header .controls{
+    display: flex;
+    gap: 1rem;
+}
+
+.header .controls i{
+    display: none;
+}
+
+.controls a{
+    background: none;
+    color: var(--l_white);
     font-size: 1.2rem;
 
     outline: none;
-    padding: .5rem 1rem;
+    border: 1px solid var(--d_black);
+
     cursor: pointer;
+
+    text-decoration: none;
 
     transition: 
         border-color 250ms ease-in-out,
         color 250ms ease-in-out;
 }
 
-.controls button:hover{
-    border-color: var(--l_green);
+.controls a:hover{
+    color: var(--l_green);
+    text-decoration: underline;
 }
+
+.content{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.content > div{
+    margin-top: 1rem;
+    width: 50%;
+    height: 20rem;
+    border: 1px solid var(--l_green);
+}
+
+
+@media only screen and (max-width: 992px) {
+ .content{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .content > div{
+    width: 100%;
+ }
+} 

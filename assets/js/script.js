@@ -1,6 +1,5 @@
 $(document).ready(function(){
-    $(document).on('click', 'button.GetCountries', function(){
-        showAlert("shit is working", 1);
+    $(document).on('click', 'a.GetCountries', function(){
 
         $.ajax({
             type: "GET",
@@ -8,17 +7,18 @@ $(document).ready(function(){
             dataType: "json",
             success: function (result, status, xhr) {
                showAlert("Success", 1);
-               console.log(result);
             },
             error: function (xhr, status, error) {
                 showAlert(`Result:  ${status} ${error} ${xhr.status} ${xhr.statusText}`, 2);
             }
+        })
+        .done((data) => {
+            console.log(data);
         });
     });
 
 
-    $(document).on('click', 'button.GetUsers', function(){
-        showAlert("shit is working", 1);
+    $(document).on('click', 'a.GetUsers', function(){
 
         $.ajax({
             type: "GET",
