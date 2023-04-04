@@ -3,7 +3,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "GET",
-            url: " https://restcountries.com/v3.1/all?fields=name",
+            url: "https://restcountries.com/v3.1/all?fields=name",
             dataType: "json",
             success: function (result, status, xhr) {
                showAlert("Success", 1);

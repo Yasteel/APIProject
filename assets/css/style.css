@@ -1,9 +1,9 @@
 .header{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem; */
 
     background-color: var(--d_black);
     color: var(--l_white);
@@ -15,8 +15,8 @@
 }
 
 .header .controls{
-    display: flex;
-    gap: 1rem;
+    /* display: flex;
+    gap: 1rem; */
 }
 
 .header .controls i{
